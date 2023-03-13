@@ -3,6 +3,23 @@ const sliderLeft = $('#slide-arrow-left');
 const sliderRight = $('#slide-arrow-right');
 
 
+function toggleUpvoteClick(a_tag) {
+    let icon = a_tag.querySelector('.upvote-icon');
+    let heart = icon.querySelector('.fa-heart');
+    if (heart.classList.contains('fa-regular')) {
+        heart.classList.remove('fa-regular');
+        heart.classList.add('fa-solid');
+        $(heart).css('opacity', '0');
+        $(heart).animate({'opacity': '1'}, 500);
+        return;
+    }
+    heart.classList.remove('fa-solid');
+    heart.classList.add('fa-regular');
+    $(heart).css('opacity', '0');
+    $(heart).animate({'opacity': '1'}, 500);
+}
+
+
 class Project {
     constructor(name, description, link, id) {
         this.name = name;
@@ -17,7 +34,10 @@ class Project {
                         <div class="project-card__content">
                             <h3 class="project-card__title">${this.name}</h3>
                             <p class="project-card__description">${this.description}</p>
-                            <a href="${this.link}" class="project-card__link">View Project</a>
+                            <div class="project-card__links">
+                                <a onclick="toggleUpvoteClick(this);" class="project-card__link upvote-btn"><span class="upvote-icon"><i class="fa-regular fa-heart"></i></span> Upvote</a>
+                                <a href="${this.link}" class="project-card__link"><i class="fa-solid fa-circle-info"></i> View More</a>
+                            </div>
                         </div>
                     </div>`;
         }
@@ -25,7 +45,10 @@ class Project {
                     <div class="project-card__content">
                         <h3 class="project-card__title">${this.name}</h3>
                         <p class="project-card__description">${this.description}</p>
-                        <a href="${this.link}" class="project-card__link">View Project</a>
+                        <div class="project-card__links">
+                            <a onclick="toggleUpvoteClick(this);" class="project-card__link upvote-btn"><span class="upvote-icon"><i class="fa-regular fa-heart"></i></span> Upvote</a>
+                            <a href="${this.link}" class="project-card__link"><i class="fa-solid fa-circle-info"></i> View More</a>
+                        </div>
                     </div>
                 </div>`;
     }
@@ -68,6 +91,10 @@ $(projectSlider).ready(function () {
     for (let i = 0; i < projects.length + 3; i++) {
         sliderLeft.click();
     }
+
+    for (let i = 0; i < projects.length + 3; i++) {
+        sliderRight.click();
+    }
 });
 
 sliderRight.click(function () {
@@ -105,4 +132,3 @@ sliderLeft.click(function () {
     const newProject = projects[pointer];
     $(projectSlider).children().eq(2).before(newProject.getHtml());
 });
-

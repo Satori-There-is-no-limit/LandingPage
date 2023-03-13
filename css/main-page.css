@@ -90,6 +90,7 @@ body {
     background: #00b4ff;
     color: white;
     padding: 15px 30px;
+    transition: .4s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -201,4 +202,37 @@ body {
     /* This is to make some space for the anchors */
     margin-top: -100px;
     padding-top: 100px;
+}
+
+.project-card__links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card__links .project-card__link {
+    border: none;
+    border-radius: 3px;
+    background: #00b4ff;
+    color: white;
+    padding: 10px 13px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-card__links .project-card__link:hover {
+    background: #008ccb;
+    text-decoration: none;
+}
+
+.project-card__links .project-card__link + .project-card__link {
+    margin-left: 1rem;
+}
+
+.project-card[class='project-card'] .project-card__content .project-card__links {
+    display: none;
+}
+
+.upvote-btn {
+    cursor: pointer;
 }
