@@ -26,3 +26,10 @@ $(document).ready(function () {
 $(document).scroll(function () {
     handleScrollBar();
 });
+
+function closeNav() {
+    if (slide.classList.contains('active')) {
+        slide.classList.remove('active');
+        $(slide).animate({'marginLeft': '-1000px'}, 500);
+    }
+}

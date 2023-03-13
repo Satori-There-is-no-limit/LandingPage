@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    height: 9999px;
+    /* The Body has more then 100% width because of the jumbotron */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -62,7 +62,7 @@ body {
 
 .jumbotron .title .satori {
     color: #00b4ff;
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 900;
 }
 
@@ -171,6 +171,7 @@ body {
     color: white;
     box-shadow: 0 0 25px rgb(0 0 0 / 50%);
     transform: scale(1.2);
+    transition: .5s;
 }
 
 .project-slider .slider-arrow-left, .project-slider .slider-arrow-right {
@@ -235,4 +236,131 @@ body {
 
 .upvote-btn {
     cursor: pointer;
+}
+
+
+.col-sm-4 {
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .project-card[class='project-card'] {
+        display: none;
+        color: orange;
+    }
+
+    .project-card[class='project-card middle'] {
+        display: block;
+        margin: 0 auto;
+        width: 85%;
+    }
+
+    .project-card__links .project-card__link {
+        padding: 10px 10px;
+    }
+
+    .project-card__links .project-card__link:hover {
+        background: #00b4ff;
+        text-decoration: none;
+    }
+
+    footer * ul {
+        padding: 0;
+    }
+
+    .dropdown-menu {
+        margin-left: 20%;
+    }
+}
+
+/* Move buttons of the middle card to the bottom 50% of the card */
+.project-card[class='project-card middle'] .project-card__links {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 100%;
+}
+
+.dropdown-menu {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+.dropdown-menu .discord-btn {
+    background: #7289da;
+    color: white;
+    border: none;
+    border-radius: 0;
+    padding: 10px 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.dropdown-menu .discord-btn:focus {
+    outline: none;
+}
+
+#login-dropdown-btn:focus ~ .dropdown-menu, #mobile-dropdown-toggle:hover ~ .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu:hover {
+    display: block;
+}
+
+.discord-btn:hover {
+    background: #5f73b9;
+    text-decoration: none;
+}
+
+.future-plans-list .project-card {
+    padding: 10px 20px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.future-plans-list .project-card:hover {
+    box-shadow: 0 0 25px rgb(0 0 0 / 50%);
+    transform: scale(1.05);
+}
+
+.future-plans-list .project-card + .project-card {
+    margin-top: 1rem;
+}
+
+footer {
+    background: rgba(0, 0, 0, .8);
+    padding: 35px 0;
+    text-align: center;
+    color: lightgray;
+
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links a {
+    color: lightgray;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: white;
 }

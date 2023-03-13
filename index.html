@@ -31,6 +31,7 @@
     <!-- JavaScript -->
     <script src="js/navbar.js" async></script>
     <script src="js/ProjectSlider.js" async></script>
+    <script src="js/FuturePlansHelper.js" async></script>
 </head>
 <body>
 <header class="header">
@@ -48,41 +49,53 @@
         <a href="#projects">
             <button class="btn"><i class="fa-solid fa-folder-open"></i> <span>Projects</span></button>
         </a>
-        <button class="btn"><i style="transform: translateY(1px);" class="fa-solid fa-clock"></i> <span>Future</span>
-        </button>
+        <a href="#future-plans">
+            <button class="btn"><i style="transform: translateY(1px);" class="fa-solid fa-clock"></i>
+                <span>Future</span>
+            </button>
+        </a>
     </div>
     <div class="logo">
         <img src="img/logo1.png" alt="Satori Logo">
     </div>
     <div class="right-navigation">
-        <button class="btn"><i class="fa-solid fa-user"></i> <span>Login</span></button>
-        <button class="btn"><i class="fa-solid fa-user-plus"></i> <span>Register</span></button>
+        <button class="btn" id="login-dropdown-btn"><i class="fa-solid fa-user"></i> <span>Login</span></button>
+        <div class="dropdown-menu">
+            <button class="discord-btn">
+                <i class="fa-brands fa-discord"></i> <span>Discord</span>
+            </button>
+        </div>
     </div>
 
     <div class="slide">
         <div class="top-navigation">
             <!-- Here is stuff like Home, About, Projects and Future -->
-            <a href="#home">
+            <a href="#home" onclick="closeNav();">
                 <button class="btn active"><i class="fa-solid fa-house"></i> <span>Home</span></button>
             </a>
             <br><br>
-            <a href="#about">
+            <a href="#about" onclick="closeNav();">
                 <button class="btn"><i class="fa-solid fa-user"></i> <span>About</span></button>
             </a>
             <br><br>
-            <a href="#projects">
+            <a href="#projects" onclick="closeNav();">
                 <button class="btn"><i class="fa-solid fa-folder-open"></i> <span>Projects</span></button>
             </a>
             <br><br>
-            <button class="btn"><i style="transform: translateY(1px);" class="fa-solid fa-clock"></i>
-                <span>Future</span>
-            </button>
+            <a href="#future-plans" onclick="closeNav();">
+                <button class="btn"><i style="transform: translateY(1px);" class="fa-solid fa-clock"></i>
+                    <span>Future</span>
+                </button>
+            </a>
         </div>
 
         <div class="bottom-navigation">
-            <button class="btn"><i class="fa-solid fa-user"></i> <span>Login</span></button>
-            <br><br>
-            <button class="btn"><i class="fa-solid fa-user-plus"></i> <span>Register</span></button>
+            <button class="btn" id="mobile-dropdown-toggle"><i class="fa-solid fa-user"></i> <span>Login</span></button>
+            <div class="dropdown-menu">
+                <button class="discord-btn">
+                    <i class="fa-brands fa-discord"></i> <span>Discord</span>
+                </button>
+            </div>
         </div>
     </div>
 </header>
@@ -158,8 +171,6 @@
                     </div>
                 </div>
 
-                <div class="w-100"></div>
-                <br>
 
                 <div class="col-sm-4">
                     <div class="card">
@@ -223,8 +234,78 @@
                         class="fa-solid fa-chevron-right"></i></span>
             </div>
         </section>
+        <section style="padding-top: 50px;">
+            <div class="jump" id="future-plans"></div>
 
+            <br><br><br>
+            <h1 class="title">Future Plans</h1>
+            <p>
+                We expect a lot of ideas from our community, and we are always looking for new challenges. But
+                unfortunately,
+                we can't do everything, so we have to pick the best ideas and work on them. Here you can see our current
+                plans.
+            </p>
+            <div class="col-sm-12 future-plans-list">
+                <div class="project-card"
+                     style="background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(img/bg1.jpg);">
+                    <div class="project-card-header">
+                        <h2 class="project-card-title">Satori Website</h2>
+                        <div class="project-card-status">
+                            <span class="project-card-status-text"><strong>Status:</strong> In Progress</span>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <p>
+                            We are currently working on our website. We are using Bootstrap 5 and we are trying to make
+                            it
+                            as
+                            responsive as possible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </div>
+
+<br><br><br><br><br>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h2 class="footer-title">Satori</h2>
+                <p>
+                    Satori is a non-profit organization which is developing open source software and helping people
+                    with
+                    their
+                    problems.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <h2 class="footer-title">Links</h2>
+                <ul class="footer-links">
+                    <li><a href="https://discord.gg/Fg8Ufn2MHy" target="_blank"><i class="fa-brands fa-discord"></i>
+                        Discord</a></li>
+                    <li><a href="https://github.com/satori-there-is-no-limit" target="_blank"><i
+                            class="fa-brands fa-github"></i> GitHub</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2 class="footer-title">Contact</h2>
+                <ul class="footer-links">
+                    <li><a href="mailto:satorigithub@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a></li>
+                </ul>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="footer-text">
+                    &copy; 2021 Satori. All rights reserved. GNU General Public License v3.0
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
