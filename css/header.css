@@ -1,0 +1,164 @@
+/* Design for the header */
+
+/* PC */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 85px;
+    background: rgba(0, 0, 0, .2);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .4s;
+}
+
+.header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header .logo img {
+    width: 100px;
+}
+
+.header .left-navigation {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+    /* To hold the logo in the middle */
+    max-width: 500px;
+}
+
+.header .left-navigation .btn, .header .right-navigation .btn {
+    border: none;
+    background: transparent;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header .left-navigation .btn:hover, .header .right-navigation .btn:hover {
+    color: #00b4ff;
+    background: rgba(255, 255, 255, .1);
+}
+
+.header .left-navigation .btn + .btn, .header .right-navigation .btn + .btn {
+    margin-left: 10px;
+}
+
+.header .left-navigation .btn i + span, .header .right-navigation .btn i + span {
+    margin-left: 5px;
+}
+
+.header .left-navigation .btn:focus, .header .right-navigation .btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.header .right-navigation {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    /* To hold the logo in the middle */
+    max-width: 500px;
+}
+
+.header .hamburger {
+    display: none;
+}
+
+.header .slide {
+    display: none;
+}
+
+.header[class='header active'] {
+    background: rgba(0, 0, 0, .7);
+    transition: .4s;
+}
+
+@media only screen and (max-width: 920px) {
+    /* Mobile */
+    .header {
+        height: 70px;
+    }
+
+    .header .logo img {
+        width: 90px;
+    }
+
+    .header .hamburger {
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .header .hamburger:focus {
+        outline: none;
+    }
+
+    .header .left-navigation, .header .right-navigation {
+        display: none;
+    }
+
+    .header .slide {
+        display: none;
+        margin-left: -1000px;
+    }
+
+    .header .slide[class='slide active'] {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 75%;
+        height: 100vh;
+        background: rgba(0, 0, 0, .9);
+        backdrop-filter: blur(10px);
+        z-index: 98;
+        display: block;
+        opacity: 1;
+    }
+
+    .header .slide .top-navigation {
+        margin-top: 50px;
+        display: block;
+    }
+
+    .header .slide .top-navigation .btn, .header .slide .bottom-navigation .btn {
+        margin-left: 15px;
+        padding: 10px 20px;
+        border: none;
+        background: rgba(255, 255, 255, .05);
+        color: white;
+    }
+
+    .header .slide .bottom-navigation {
+        /* at bottom of the slide */
+        bottom: 100px;
+        position: absolute;
+    }
+
+    .header .slide .top-navigation .btn:focus, .header .slide .bottom-navigation .btn:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}

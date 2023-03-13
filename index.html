@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Satori - There is no limit</title>
+    <meta name="description"
+          content="Satori is not only a team, it's a full community of people who love to use, create and share their knowledge and software.">
+    <meta name="keywords" content="Satori, Satori Team, Satori Community, Satori, Programming, Knowledge, Software">
+    <!-- Optimize SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Satori Team">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDNs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+            integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+          integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main-page.css">
+    <link rel="stylesheet" href="css/header.css">
+    <!-- JavaScript -->
+    <script src="js/navbar.js" async></script>
+    <script src="js/ProjectSlider.js" async></script>
+</head>
+<body>
+<header class="header">
+    <button class="hamburger" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="left-navigation">
+        <!-- Here is stuff like Home, About, Projects and Future -->
+        <a href="#home">
+            <button class="btn active"><i class="fa-solid fa-house"></i> <span>Home</span></button>
+        </a>
+        <a href="#about">
+            <button class="btn"><i class="fa-solid fa-user"></i> <span>About</span></button>
+        </a>
+        <a href="#projects">
+            <button class="btn"><i class="fa-solid fa-folder-open"></i> <span>Projects</span></button>
+        </a>
+        <button class="btn"><i style="transform: translateY(1px);" class="fa-solid fa-clock"></i> <span>Future</span>
+        </button>
+    </div>
+    <div class="logo">
+        <img src="img/logo1.png" alt="Satori Logo">
+    </div>
+    <div class="right-navigation">
+        <button class="btn"><i class="fa-solid fa-user"></i> <span>Login</span></button>
+        <button class="btn"><i class="fa-solid fa-user-plus"></i> <span>Register</span></button>
+    </div>
+
+    <div class="slide">
+        <div class="top-navigation">
+            <!-- Here is stuff like Home, About, Projects and Future -->
+            <a href="#home">
+                <button class="btn active"><i class="fa-solid fa-house"></i> <span>Home</span></button>
+            </a>
+            <br><br>
+            <a href="#about">
+                <button class="btn"><i class="fa-solid fa-user"></i> <span>About</span></button>
+            </a>
+            <br><br>
+            <a href="#projects">
+                <button class="btn"><i class="fa-solid fa-folder-open"></i> <span>Projects</span></button>
+            </a>
+            <br><br>
+            <button class="btn"><i style="transform: translateY(1px);" class="fa-solid fa-clock"></i>
+                <span>Future</span>
+            </button>
+        </div>
+
+        <div class="bottom-navigation">
+            <button class="btn"><i class="fa-solid fa-user"></i> <span>Login</span></button>
+            <br><br>
+            <button class="btn"><i class="fa-solid fa-user-plus"></i> <span>Register</span></button>
+        </div>
+    </div>
+</header>
+<div class="jumbotron-background"></div>
+<div class="jumbotron" id="home">
+    <h1 class="title">
+        <span class="satori">Satori</span><br>
+        <span class="slogan">There is no limit</span>
+    </h1>
+
+    <div class="btn-list">
+        <a href="https://discord.gg/Fg8Ufn2MHy" target="_blank">
+            <button class="btn">Join Discord</button>
+        </a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="jump" id="about">
+        <section>
+            <!-- About -->
+            <br>
+            <h1 class="title">What's Satori?</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text">
+                        Satori is not only a team, it's a full community of people who love to use, create and share
+                        their
+                        knowledge
+                        and software.
+                    </p><br>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="icon-bubble">
+                            <i class="fa-solid fa-brush card-icon"></i>
+                        </div>
+                        <h2 class="card-title">Creative</h2>
+                        <p>
+                            Our community and staff are very creative, and we are always looking for new ideas.
+                            Since they are working hand in hand together, they are able to create amazing things.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="icon-bubble">
+                            <i class="fa-solid fa-code card-icon"></i>
+                        </div>
+                        <h2 class="card-title">Open Source</h2>
+                        <p>
+                            We are developing your ideas, but we are not doing it alone. The whole team and even the
+                            community
+                            is working on it. After that, everything will be released <strong>for free</strong> on
+                            GitHub,
+                            OpenSource.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="icon-bubble">
+                            <i class="fa-solid fa-graduation-cap card-icon"></i>
+                        </div>
+                        <h2 class="card-title">Clever</h2>
+                        <p>
+                            We have 8 developers in our team. Every one of them has his own expirience and knowledge.
+                            This is why satori is able to create amazing stuff which is stable and secure.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-100"></div>
+                <br>
+
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="icon-bubble">
+                            <i class="fa-solid fa-hand-holding-dollar card-icon"></i>
+                        </div>
+                        <h2 class="card-title">Non-Profit</h2>
+                        <p>
+                            We are not a company, we are a community. We are not here to make money, we are here to make
+                            your ideas come true and to improve our programming skills.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="icon-bubble">
+                            <i class="fa-solid fa-hand-peace card-icon"></i>
+                        </div>
+                        <h2 class="card-title">Friendly</h2>
+                        <p>
+                            Our community is very friendly and helpful. We are always here to help you with your
+                            problems,
+                            no matter if it is a programming problem or just a problem with your grandmas printer.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="icon-bubble">
+                            <i class="fa-solid fa-person-digging card-icon"></i>
+                        </div>
+                        <h2 class="card-title">Adaptable</h2>
+                        <p>
+                            We will <strong>never</strong> say something like "We can't do that". Okay, if your idea is
+                            malware,
+                            we'll say that.
+                            But otherwhise, we will try to make it happen. We are always looking for new challenges.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="padding-top: 15px;">
+            <div class="jump" id="projects"></div>
+
+            <br><br><br>
+            <h1 class="title">Project Ideas</h1>
+            <p>
+                Take a look at the ideas of our community and our team. If you like one of them, you can upvote them
+                here and
+                if it has enough upvotes, we will start working on it.
+            </p><br>
+            <!-- Slider with 3 Projects per Slide -->
+            <div class="project-slider">
+        <span id="slide-arrow-left" class="slider-arrow slider-arrow-left"><i
+                class="fa-solid fa-chevron-left"></i></span>
+                <!-- <h1>Hmm, nothing here yet.</h1> -->
+                <span id="slide-arrow-right" class="slider-arrow slider-arrow-right"><i
+                        class="fa-solid fa-chevron-right"></i></span>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+/* DEBUG */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 9999px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Normal Stuff */
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+.jumbotron-background {
+    background-image: linear-gradient(rgba(0, 180, 255, .25), rgba(0, 255, 255, .2)), url(../img/bg1.jpg);
+    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.jumbotron {
+    z-index: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: transparent;
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3));
+}
+
+.jumbotron .title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.jumbotron .title .satori {
+    color: #00b4ff;
+    font-size: 6rem;
+    font-weight: 900;
+}
+
+.jumbotron .title .slogan {
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.jumbotron .btn-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.jumbotron .btn-list .btn {
+    border: none;
+    border-radius: 3px;
+    background: #00b4ff;
+    color: white;
+    padding: 15px 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron .btn-list .btn:hover {
+    background: #008ccb;
+}
+
+.container .title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card {
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+    padding: 15px 20px;
+}
+
+.icon-bubble {
+    padding-top: 10px;
+    border-radius: 50%;
+    background: #528dd7;
+    height: 5rem;
+    width: 5rem;
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+    margin: 0 auto;
+}
+
+.icon-bubble .card-icon {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding-top: 15px;
+}
+
+.card-title {
+    margin-top: 0.75rem;
+}
+
+.project-slider {
+    margin-top: 2rem;
+    display: flex;
+    -ms-overflow-style: none;
+    display: -ms-flexbox;
+    position: relative;
+    height: 400px;
+}
+
+.project-slider .project-card {
+    width: calc(100% / 3);
+    margin: 1rem;
+    box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    transition: .5s;
+}
+
+.project-slider .project-card[class='project-card middle'] {
+    background: rgba(0, 0, 0, .8);
+    color: white;
+    box-shadow: 0 0 25px rgb(0 0 0 / 50%);
+    transform: scale(1.2);
+}
+
+.project-slider .slider-arrow-left, .project-slider .slider-arrow-right {
+    /* If we use top: 50% then the arrow will be at the top from the page not from the card */
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 1;
+    background: #00b4ff;
+    color: white;
+    padding: 10px 15px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+    cursor: pointer;
+}
+
+.project-slider .slider-arrow-left {
+    border-radius: 4px 0 0 4px;
+}
+
+.project-slider .slider-arrow-right {
+    border-radius: 0 4px 4px 0;
+    left: auto;
+    right: 0;
+}
+
+
+.jump {
+    /* This is to make some space for the anchors */
+    margin-top: -100px;
+    padding-top: 100px;
+}
